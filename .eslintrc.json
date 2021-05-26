@@ -1,5 +1,11 @@
 {
   "extends": [
+    "eslint:recommended",
     "plugin:vue/recommended"
-  ]
+  ],
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2015
+  }
 }

@@ -14,7 +14,9 @@
   "devDependencies": {
     "eslint": "^7.27.0",
     "eslint-plugin-vue": "^7.9.0",
+    "eslint-webpack-plugin": "^2.5.4",
     "vue": "^2.6.12",
+    "vue-eslint-parser": "^7.6.0",
     "vue-loader": "^15.9.7",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^5.37.1",

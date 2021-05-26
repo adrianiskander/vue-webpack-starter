@@ -1,5 +1,6 @@
 const path = require('path');
 const VueLoader = require('vue-loader/lib/plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: './src',
@@ -21,6 +22,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new ESLintPlugin({
+      extensions: ['.js', '.vue']
+    }),
     new VueLoader()
   ],
   resolve: {
