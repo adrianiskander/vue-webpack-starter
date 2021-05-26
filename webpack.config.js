@@ -1,21 +1,17 @@
 const path = require('path');
 const VueLoader = require('vue-loader/lib/plugin');
-const publicDir = path.join(__dirname, 'public');
-
 
 module.exports = {
   entry: './src',
-
   output: {
     filename: 'app.js',
-    path: publicDir
+    path: path.resolve(__dirname, 'public')
   },
-
   devServer: {
-    contentBase: publicDir,
-    port: 1000
+    contentBase: path.resolve(__dirname, 'public'),
+    hot: true,
+    port: 3000
   },
-
   module: {
     rules: [
       {
@@ -24,8 +20,10 @@ module.exports = {
       }
     ]
   },
-
   plugins: [
     new VueLoader()
-  ]
+  ],
+  resolve: {
+    extensions: ['.js', '.vue']
+  }
 };
